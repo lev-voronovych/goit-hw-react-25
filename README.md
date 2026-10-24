@@ -1,5 +1,18 @@
 # React + Vite
 
+## TMDB API key
+
+Create a `.env` file in the project root and set a valid TMDB API key:
+
+```env
+VITE_TMDB_API_KEY=your_tmdb_api_key
+```
+
+You can use `.env.example` as a template. Restart the Vite dev server after
+changing the environment file. Vite embeds `VITE_` variables in the client
+bundle, so this key is visible to users; use a key intended for browser use and
+restrict it through TMDB where possible.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
