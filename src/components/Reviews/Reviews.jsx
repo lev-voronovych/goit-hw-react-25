@@ -9,7 +9,8 @@ function Reviews() {
   useEffect(() => {
     getMovieReviews(id).then(setReviews);
   }, [id]);
-
+    
+  if (reviews.length === 0) return <p>No reviews available.</p>;
   return (
     <ul>
       {reviews.map(({ id, author, content }) => (

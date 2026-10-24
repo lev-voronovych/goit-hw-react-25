@@ -42,8 +42,19 @@ export async function getMovieCredits(movieId) {
     const data = await response.json()
 
     if (!response.ok) {
-        throw new Error(data.status_message || "Error getting movie cast")
+        throw new Error( "Error getting movie cast")
     }
 
     return data.cast
+}
+
+export async function getMovieReviews(movieId) {
+    const response = await fetch(`${GENERAL_LINK}/movie/${movieId}/reviews?api_key=${API_KEY}`);
+    const data = await response.json()
+
+    if (!response.ok) {
+        throw new Error( "Error getting movie reviews")
+    }
+
+    return data.results
 }
