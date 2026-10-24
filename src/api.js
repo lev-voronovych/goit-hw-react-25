@@ -31,7 +31,7 @@ export async function getMovieById(movieId) {
     const data = await response.json()
 
     if (!response.ok) {
-        throw new Error("error get movir by id")
+        throw new Error("error get movie by id")
     }
 
     return data
